@@ -1,12 +1,13 @@
-clearvars
+clearvars;
+close all;
 
 %config
 %how many times to repeat
 repeatAnimation=5;
 %option to play animation frame by frame by pressing enter
-frameByFrame=true;
+frameByFrame=false;
 %animation speed, default = 1= realtime
-simSpeed=1; %or manually set tstep after reading input data
+frameDelay=0.1; %or manually set tstep after reading input data
 
 %specify simulation input data
 %Filename='sample_data/rower4_kap_v2.kap';

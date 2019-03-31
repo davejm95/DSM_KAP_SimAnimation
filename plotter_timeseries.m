@@ -1,4 +1,4 @@
-close all;
+
 
 
 
@@ -73,9 +73,8 @@ for kt=1:size(time)
             input('press enter','s');
         else
            
-            %makes the program wait for a bit, -0.05 accounts 
-            %for the delay to draw the plot
-            pause(tstep/simSpeed-0.05);
+            %makes the program wait for a bit, 
+            pause(frameDelay);
         end
         
     end
