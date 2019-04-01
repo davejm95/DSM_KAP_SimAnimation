@@ -4,19 +4,29 @@ end
 
 %read data from input file
 H=dlmread(Filename);
+
 % store in vars
 line=1;
 NBody=H(1,1);
 NRevolute=H(1,2);
 NTranslation=H(1,3);
 
+if useCompositeJoints
+    NRevRev=0;
+    NRevTra=0;
+    NGround=H(1,4);
+    NSimple=H(1,5);
+    NDriver=H(1,6);
+    NPointsInt=H(1,7);
+else
+    NRevRev=H(1,4);
+    NRevTra=H(1,5);
+    NGround=H(1,6);
+    NSimple=H(1,7);
+    NDriver=H(1,8);
+    NPointsInt=H(1,9);
+end
 
-NRevRev=H(1,4);
-NRevTra=H(1,5);
-NGround=H(1,6);
-NSimple=H(1,7);
-NDriver=H(1,8);
-NPointsInt=H(1,9);
 % Initial Positions
 for i=1:NBody
     line=line+1;
