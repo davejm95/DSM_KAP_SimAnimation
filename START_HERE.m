@@ -20,11 +20,12 @@ frameDelay=0.1; %or manually set tstep after reading input data
 Filename='sample_data/rower4_kap_v2.kap';
 %Filename='sample_data/4BAR.KAP';
 
-%load the simulation results: 
+% how to load the simulation results: 
 % 1. use "import data" feature of matlab, chose *.* (All files) in file
 % type, then chose your *.PLT output file. 
 % 2. Import it as numerical matrix, set the table title (=variable name) to
 % plt, then save the variable plt in a *.mat file by right click
+% then load them in START_HERE.m with 
 %load('sample_data/plt_rower4.mat');
 load('sample_data/plt4bar.mat');
 
